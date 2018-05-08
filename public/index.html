@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>weater_chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Weather</h1>
+                <br>
+                <form id="weather_form" class="input-group">
+                    <input type=text class="form-control get-city input-lg" placeholder="Enter City" />
+                    <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary btn-lg ">GO!</button>
+                </span>
+                </form>
+                <hr>
+            </div>
+        </div>
+
+
+
+        <div class="results">
+        </div>
+
+        <script id="weather-template" type="text/x-handlebars-template">
+            <div class="row infos">
+                <div class="col-md-12">
+                    <div class="result ">
+                        <blockquote>
+                                <div class="name text-uppercase">{{name}} <i class="fa fa-trash pull-right" aria-hidden="true"></i></div>
+                                <strong><span>°F </strong> at on </span> <br>
+                                <hr>
+                                <span class="type-weather"><div class="weather-img"></div><em>{{typeOfWeather}}</em></span>
+                                <div class="comment-HTML">
+                                    <ul class="list-comments">
+                                    </ul>
+                                </div>
+                                <form id="comment_form" class="form-horizontal input-group ">
+                                    <input type=text class="form-control comment " placeholder="Comment about the weather in {{name}}" />
+                                    <span class="input-group-btn">
+                                <button class="comment-btn btn btn-success">Comment</button>
+                            </span>
+                                </form>
+                        </blockquote>
+                        </div>
+                    </div>
+                </div>
+        </script>
+        </div>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
+        <script type="module" src="main.js"></script>
+
+  
+    </body>
+
+</html>
